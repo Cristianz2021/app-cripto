@@ -1,0 +1,72 @@
+<%- include("template/cabecera", {tituloweb: 'Curiosidades'}) %>
+
+<div class="curiosity">
+		<div class="curiosity_content">
+		<img src="/img/curiosity3.jpg">
+		<span class="curiosity_text">
+		 <h4>El WhopperCoin</h4>
+		 <p>
+		 	Sabias que que Burger King en Rusia tuvo un proyecto ambicioso que trataba sobre las criptomonedas. El cual su nombre era WhopperCoin el cual fue basada en la plataforma Waves. Aunque la criptomoneda fracaso es una gran curiosidad. 
+		 </p>
+		</span>
+		</div>
+		<!--Curiosity 2-->
+     	<div class="curiosity_content">
+		<img src="/img/curiosity.jpg">
+		<span class="curiosity_text">
+		 <h4>Perdio 360 Millones de dolares</h4>
+		 <p>
+		 	Sabias que James Howells un ingeniero informatico de Gales se deshizo por error de un disco duro con mas de 7500 bitcoins. Aunque hoy en dia siga buscando recuperar ese disco duro lamentablemente al dia de hoy no lo a encontrado.
+		 </p>
+		</span>
+		</div>
+		<!--Curiosity 3-->
+		<div class="curiosity_content">
+		<img src="/img/curiosity.png">
+		<span class="curiosity_text">
+		 <h4>La mayor estafa en criptomonedas</h4>
+		 <p>
+		   Sabias que un criptomoneda estafo entre 4000 y 19 mil millones con un esquema llamado ponzi esa criptomoneda se llama OneCoin y se hacia llamar la asesina del bitcoin. Aunque parecia un proyecto ambicioso al dia de hoy la creadora se encuentra desaparecida.
+		 </p>
+		</span>
+		</div>
+		<!--Curiosity 4-->
+		<div class="curiosity_content">
+		<img src="/img/curiosity2.jpg">
+		<span class="curiosity_text">
+		 <h4>ICF Zurich</h4>
+		 <p>
+		 	Sabia que una iglesia evangélica suiza, acepta donaciones en diversas criptodivisas como el bitcoin, ether, ripple y stellar lumen. Como se dice el futuro es hoy. 
+		 </p>
+		</span>
+	</div>
+	<!--Curiosity 5-->
+		<div class="curiosity_content">
+		<img src="/img/curiosity4.jpg">
+		<span class="curiosity_text">
+		 <h4>Pizzas de Papa John’s</h4>
+		 <p>
+		 	Sabia que en el año 2010 en Papa John’s se realizo un transacion de mas de 10.000 bitcoin. En aquel momento eran tan solo 30$. Nada mal no bueno en la actualidad eso es nada mas y nada menos que mas de 400.000$. Una de las transacciones más curiosas y mas grande de la historia.
+		 </p>
+		</span>
+	</div>
+	<!--Recomendaciones-->
+    <div class="recomendaciones_links">
+      <h4>Paginas similares</h4>
+      <%- include("template/recomendaciones", {
+          img_section: '/img/cripto.jpg',
+          titulo_section: 'Inicio',
+          parrafo_section: 'Aqui podras volver al menu principal.',
+          link_section: '/',
+          titulo2_section: 'Precio de la criptomoneda',
+          parrafo2_section: 'Aqui podras ver en grafica los precios actual de las criptomonedas.',
+          img_section2: '/img/curiosity2.jpg',
+          link_section2: '/price'
+      }); %>      
+    </div>
+	<!--Mi otros sitios web-->
+    <div class="site_web">
+      <h4>Mi otros sitios web</h4>
+      <%- include("template/sitios_web"); %>
+    </div>
+</div>

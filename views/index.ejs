@@ -1,0 +1,118 @@
+<%- include("template/cabecera", {tituloweb: 'Pagina de inicio'}) %>
+<!--Contenido-->
+<header class="content">
+  <!--Background Img-->
+  <div class="content__img"> 
+  	<img src="/img/cripto.jpg">
+  </div>	
+  <!--transparent background-->
+   <div class="background__transparent"></div>
+   <!--Content-->
+   <div class="content__text">
+   	<p>
+   	 Si no tienes nada de conocimiento sobre las criptomonedas. Tranquilo aqui intentaremos darte la informacion que necesitas. Si deseas tener mayor informacion puedes dejarnos tu nombre y correo electronico.
+   	</p>
+    <a href="/contact">Saber mas</a>
+   </div>
+</header>
+<!--Contact-->	
+ <div class="card-form">
+  <form action="/new-user" id="form" class="form" method="post">
+  <!--Name-->
+   <div class="card_input">
+	<label>Name</label>
+	 <input type="text" name="name" id="name" placeholder="Name" autofocus>
+   </div>
+   <!--Mail-->
+    <div class="card_input">
+	 <label>Email</label>
+	  <input type="email" name="email" id="email" placeholder="email" >
+	</div>
+	 <button class="btn_form" id="btn_enviar">Enviar</button>
+	</form>
+	</div>
+<div class="card_center">	
+	<!--high-->
+	<div class="tall">
+	<span class="tall__content">
+     <h4>¿Por que invertir en criptomonedas?</h4>
+	 <p>
+	 	Algunas de las principales ventajas de las criptomonedas no están relacionadas con las monedas en sí, sino con la infraestructura en la que se apoyan, es decir, la blockchain (o cadena de bloques), un registro de almacenamiento de datos descentralizado que rastrea todas las transacciones que se realizan en el. En el grafico vamos a ver las tres monedas mas famosas en su valor maximo como podemos observar el mas importante que es el bitcoin llego a superar la barrera de los 60.000 dolares.
+	 </p>	
+	</span>
+	 <canvas id="grafica_cripto"></canvas>
+	</div>
+</div>
+<!--Team-->
+  <div class="team">
+    <h4>Equipo</h4>
+    <p>
+      Los nombres y contactos de las personas que contribuyente con el proyecto.
+    </p>
+    <main id="main_team" class="main"></main>
+   <!--Template card -->
+    <template id="template">
+     <div class="card__img">
+      <img 
+      src="./img"
+      class="card_user_img" 
+      >
+     </div>
+      <h2 class="card_name">
+        Name
+      </h2>
+      <h4 class="card_mail">
+        Email
+      </h4>
+      <span class="card_phone">
+        Phone
+      </span>
+   </template>
+  </div> 
+ <!--Risk-->
+  <main class="risk">
+     <span class="risk_content">
+      <h2>Riesgo</h2>
+        <p>
+          Como en toda inversiones siempre existe riesgos como los riesgo de tecnologicos y cibernéticos. Recuerda que estos puede suceder porque las criptomonedas no son moneda de curso legal y no están respaldadas por los bancos centrales. Tambien la imposibilidad de revertir las operaciones realizadas en criptomonedas una vez ejecutadas y por ultimo la volatilidad del valor de las cripotomonedas. Este es el mas comun ya que el valor de esta puede variar segun el mercado ya que al no tener ningun respaldo importante suma un gran riesgo. Por ejemplo el bitcoin llego alcanzar el 9 de noviembre del 2021 el valor de 60.000$ pero en el dia de 09/03/2022 es de 41.000$. Como observaremos la caida del bitcoin desde su valor historico. 
+        </p> 
+        <canvas id="grafica_negativa" style="background:#333333;"></canvas>
+     </span>
+  </main> 
+  <!--questions-->
+   <div class="questions_block">
+    <%- include("template/questions"); %>
+   </div> 
+   <!--Recomendaciones-->
+    <div class="recomendaciones_links">
+      <h4>Paginas similares</h4>
+      <!--Datos-->
+      <%- include("template/recomendaciones", {
+          img_section: '/img/curiosity.jpg',
+          titulo_section: 'Curiosidades',
+          parrafo_section: 'Aqui podras encontrar algunos datos y curiosidades sobre las criptomonedas',
+          link_section: '/curiosity',
+          titulo2_section: 'Precio de la criptomoneda',
+          parrafo2_section: 'Aqui podras ver en grafica los precios actual de las criptomonedas.',
+          img_section2: '/img/curiosity2.jpg',
+          link_section2: '/price' 
+      }); %>      
+    </div>
+    <!--Mi otros sitios web-->
+    <div class="site_web">
+      <h4>Mi otros sitios web</h4>
+      <%- include("template/sitios_web"); %>
+    </div>
+    <!--Footer-->
+    <footer class="footer">
+   <span class="footer__title">
+     Cristian Zamora 2022. 
+     </span>
+     <!--Links--> 
+     <main class="footer__links">
+      <a target="__BLANK" href="https://github.com/Cristianz2021/" class="git"><i class="fab fa-github"></i></a>
+      <a target="__BLANK" href="https://www.linkedin.com/in/cristian-zamora-6bb1aa1b8/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      <a target="__BLANK" href="https://portafolio-cristian.herokuapp.com/" class="portfolio"><i class="fas fa-business-time"></i></a>
+     </main>
+    </footer>
+</html>

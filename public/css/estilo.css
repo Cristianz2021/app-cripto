@@ -1,0 +1,783 @@
+*{
+	box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	background: #1A2027; 
+	color: #FFFFFF;
+	overflow-x: hidden;
+}
+
+/*Icon nav*/
+.main_var{
+  display: none;
+}
+
+.icono{
+ cursor: pointer;
+ margin-right: 10px;
+}
+
+.icono:hover{
+opacity: 0.3;
+}
+
+/*Navigation*/
+.navbar{
+  width: 100%;
+  height: 100%;  
+}
+
+.navbar .nav-main{
+	background: #262626;
+	display: flex;
+	font-size: 18px;
+	padding: 30px 0; 
+	margin: 0; 
+}
+
+.nav-main li{
+	list-style: none;
+	margin: auto;
+}
+
+.nav-main a{
+ 	text-decoration: none;
+ 	color: #FFFFFF;
+}
+
+.nav-main a.btn_link:hover{
+	background: #4F4F4F;
+	padding: 30px 15px;
+	transition: padding 0.5s ease-in-out;
+}
+
+/*Grafica in nabvar*/
+.nav-main__price_cripto{
+	width: 30%;
+}
+
+#cripto_price{
+	position: absolute;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	font-size: 16px;
+	top: 20px;
+}
+
+.cripto_price_content{
+	display: flex;
+}
+
+#cripto_price img.icon_cripto{
+	width: 30%;
+	height: 50%;
+}
+
+/*Content*/
+.content{
+	width: 100vw;
+	margin: auto;
+	display: flex;
+	height: 65vh;
+}
+.content__img{
+	position: absolute;
+	width: 100%;
+	top: 80px;
+	left: 0;
+}
+
+.content__img img{
+	width: 100vw;
+	height: 70vh;
+}
+
+/*transparent*/
+.background__transparent{
+	position: absolute;
+	width: 100%;
+	height: 70vh;
+	z-index: 1;
+	opacity: 0.6;
+	background: #4F4F4F;
+	top: 80px;
+	left: 0; 
+}
+/*Text*/
+.content__text{
+	position: relative;
+	z-index: 3;
+	margin: 120px 0;
+	display: block;
+	font-size: 24px;
+	padding: 20px 0;
+}
+
+/*Button*/
+.content__text a{
+	margin: 20px 0;
+	color: #FFFFFF;
+	background: #1A2027;
+	padding: 20px 260px;
+	border-radius: 20px;
+	text-decoration: none;
+	border: solid 2px #0072E5;
+	transition: all 2s ease-in-out;  
+}
+.content__text a:hover{
+	background: #4F4F4F;
+	border: solid 2px #1A2027; 
+}
+
+/*Contact*/
+.card-form{
+	position: relative;
+	background: #262626;
+	width: 100vw;
+	height: 10vh;
+	margin: 0;	
+}
+
+.form{
+	display: flex;
+	margin: 50px 30px;
+}
+
+.card_input{
+	font-size: 24px;
+	margin: auto;
+}
+.card_input input{
+	width: 30vw;
+	height: 7vh;
+}
+
+.btn_form{
+	border-radius: 20px;
+	padding: 0px 50px;
+	border: 2px solid #0072E5;
+	background: #1A2027;
+	color: #FFFFFF;
+	font-size: 19px;
+}
+/*card_center*/
+.card_center{
+	width: 80%;
+	margin: auto;
+}
+
+/*Content Cripto*/
+.tall{
+	background: #333333;
+	width: 70%;
+	margin: auto;
+	text-align: center;
+}
+
+.tall .tall__content h4{
+	border-radius: 10px;
+	font-size: 24px;
+	background: #262626;
+}
+
+.tall .tall__content p{
+	font-size: 21px;
+}
+
+/*Team card*/
+.team{
+	width: 100vw;
+	background: #0072E5;	
+	text-align: center;
+	margin: 0;
+}
+
+.team h4{
+	font-size: 25px;
+}
+
+.team p{
+	font-size: 21px;
+}
+/*Cards*/
+.main{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	margin: auto;
+	text-align: center;
+}
+
+.content_card{
+	display: block;
+	text-align: center;
+}
+
+.content_card h4{
+	font-size: 15px;
+}
+
+.card_img img.card_user_img{
+	width: 40%;
+	max-width: 70px;
+}
+
+/*Risk*/
+.risk .risk_content{
+	margin: 0;
+	width: 100%;
+	color: #D3D3D3;
+}
+
+.risk_content h2{
+	font-size: 26px;
+}
+
+/*Questions*/
+.questions_block{
+	margin: 90px 200px;
+	width: 70%;
+	max-width: 100em;
+	text-align: center;
+	background: #333333;
+	border-radius: 8px;
+}
+
+.title{
+	background: #262626;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+ .questions_content{
+	width: 0;
+	height: 0;
+	margin: auto;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+}
+
+.questions_content p{
+	font-size: 19px;
+}
+
+.questions_content li{
+	font-size: 23px; 
+}
+
+.activo{
+	background: #444444;
+	transition: all 0.2s ease-in-out;
+}
+/*Recomendaciones_links*/
+.recomendaciones{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	text-decoration: none;
+}
+
+.recomendaciones_link{
+	width: 60%;
+	height: 90%;
+	background: #333333;
+	text-align: center;
+	margin: auto;
+	color: #6F7E8C;
+	text-decoration: none;
+}
+
+.recomendaciones_link p{
+	font-size: 19px;
+}
+
+.recomendaciones_link img{
+	width: 100%;
+	height: 50%;
+}
+/*Footer*/
+.footer{
+	display: grid;
+	grid-template-columns: repeat(2, 0.5fr);
+	width: 100%;
+	height: 100%; 
+	align-items: center;
+	margin-top: 100px;
+}
+
+.footer__title{
+	color: #6F7E8C;
+	font-size: 28px;
+}
+
+.footer__links a{
+	font-size: 38px;
+	margin: 0px 50px;
+}
+
+.git{
+ color: #ffffff;
+}
+
+.linkedin{
+	color: #0072E5;
+}
+.portfolio{
+color: #acf;
+}
+
+.footer__links a:hover{
+	opacity: 0.3;
+}
+
+/*Card sucess*/
+.card_sucess,
+ .card_error{
+	position: fixed;
+	display: block;
+	width: 60vw; 
+	text-align: center;
+	top:  100px;
+	color: #FFFFFF;
+	right: 0;
+	border-radius: 20px;
+	z-index: 4;
+	opacity: 0;
+	transform: translateX(1000px);
+	transition: all 1.5s ease-in-out;
+}
+
+.card_sucess{
+	background:#0072E5;
+}
+
+.card_error{
+	background: red;
+}
+
+.card_sucess.activo{
+	transform: translateX(0px);
+	opacity: 1;
+}
+
+.card_error.activo{
+	transform: translateX(0px);
+	opacity: 1;
+}
+
+/*More Information*/
+.content_form{
+	margin: auto;
+	width: 60%;
+	text-align: center;
+	height: 70vh;
+}
+
+.content_form .form_information{
+	margin: 90px 50px;
+	background: #262626;
+	border-radius: 20px;
+	max-width: 36em;
+	height: 100%;
+}
+
+.card_input_information{
+	display: grid;
+	grid-template-rows: repeat(2,1fr);
+	margin: 30px 0;
+}
+
+.card_input_information input{
+	margin: auto;
+	padding: 10px 0px;
+	width: 60%;
+}
+
+.btn_form_information{
+	margin: 50px 0;
+	border-radius: 20px;
+	padding: 20px 150px;
+	border: 2px solid #0072E5;
+	background: #1A2027;
+	color: #FFFFFF;
+}
+
+/*Media query*/
+@media (max-width: 1024px){
+	/*Nabvar*/
+	.navbar .nav-main{
+		font-size: 18px;
+	}
+	#cripto_price{
+		font-size: 16px;
+	}
+/**********************Content**********************/
+	.content__text{
+	 margin: 60px 0;
+	 font-size: 23px;
+	}	
+/**********************Questions**********************/
+	.questions_block{
+	 margin: 90px 140px;
+	}
+/******************Recomendaciones_links******************/
+	.recomendaciones_link{
+		font-size: 16px;
+		height: 40vh;
+	}
+
+}
+
+
+@media (max-width: 768px){
+	/*Nabvar*/
+	.main_var{
+		display: block;
+		position: fixed;
+		z-index: 5;
+	}
+
+
+	.navbar .nav-main{
+		display: block;
+		position: fixed;
+		height: 50vh;
+		z-index: 4;
+		font-size: 21px;
+		transition: transform .5s ease-in-out;
+		transform: translateX(-500px);
+
+	}
+
+	.navbar .nav-main.show{
+		transform: translateX(0);
+	}
+
+	.nav-main li{
+		margin: 10px 0; 
+	}
+
+	.nav-main a.btn_link:hover{
+		padding: 0px 10px;
+	}
+
+	/*Price cripto*/
+	#cripto_price{
+		position: relative;
+	}
+	.cripto_price_content{
+		grid-column: 1/-1;
+		font-size: 16px;
+	}
+	
+	#cripto_price img.icon_cripto{
+		width: 80%;
+		height: 80%;
+	}
+
+/**********************Content**********************/
+	.content{
+		height: 40vh;
+	}
+
+	.content__img{
+		top: 0;
+	}
+
+	.content__img img{
+	  height: 45vh;
+	}
+	/*transparent*/
+	.background__transparent{
+		height: 45vh;
+		top: 0;
+	}
+	/*Text*/
+	.content__text{
+		font-size: 29px;
+   }
+   
+/**********************Card_form**********************/
+   .card-form{
+	  height: 15vh;
+	}
+    
+    .card_input{
+	 font-size: 23px;
+
+	}
+	.card_input input{
+	 width: 35vw;
+	}
+
+	.btn_form{
+		position: absolute;
+		top: 100px;
+		left: 0;
+		height: 30%;
+		width: 100%;
+	}
+
+/**********************Content Cripto**********************/
+	.tall{
+		width: 100%; 
+	}
+	.tall .tall__content h4{
+		font-size: 28px;
+	}
+
+	.tall .tall__content p{
+		font-size: 26px;
+	}
+/**********************Team card**********************/
+
+	.team{
+	 width: 50vw;
+	 margin: auto;
+	}
+
+	.team h4{
+	 font-size: 23px;
+	}
+	/*Cards*/
+	.content_card{
+		grid-column: 1/-1;
+	}
+ 
+	.card_img img.card_user_img{
+	 width: 20%;
+	 max-width: 70px;
+	}
+
+/**********************Risk**********************/
+	.risk .risk_content{
+	 text-align: center;
+	}
+
+	.risk_content h2{
+      font-size: 32px;
+    }
+
+    .risk_content p{
+    	font-size: 28px;
+    }
+
+/**********************Questions**********************/
+	.questions_block{
+	 margin: auto;
+	 width: 100%;
+	}
+
+	.questions_content{
+	 font-size: 23px; 	
+	}
+
+	.title{
+	 font-size: 28px;
+	}
+/******************Recomendaciones_links******************/
+	.recomendaciones_links h4,
+	.site_web h4{
+		font-size: 30px;
+		text-align: center;
+	}
+
+	.recomendaciones_link{
+	 grid-column: 1/-1;
+	 height: 80%;
+	 font-size: 23px;
+	}
+
+    .recomendaciones_link img{
+	 width: 100%;
+	 height: 50%;
+	}
+/**********************Footer**********************/
+	.footer__title{
+	 font-size: 26px;
+	}
+
+	.footer__links a{
+	 margin: 0px 30px;
+	}
+
+/**********************Form Information**********************/
+	.content_form{
+		height: 30vh;
+	}
+	.card_input_information{
+		font-size: 24px;
+		text-align: left;
+	}
+
+	.btn_form_information{
+	 font-size: 26px;
+	}
+}
+
+@media (max-width: 680px){
+	/*Price cripto*/
+	#cripto_price img.icon_cripto{
+		width: 60%;
+		height: 60%;
+	}
+
+	/*Content*/
+	.content{
+		height: 35vh;
+	}
+
+	.content__img img{
+	  height: 35vh;
+	}
+	/*transparent*/
+	.background__transparent{
+		height: 35vh;
+	}
+	/*Text*/
+	.content__text{
+     font-size: 23px;
+     margin: 0;
+   }
+
+	/*Button*/
+	.content__text a{
+		padding: 20px 80px;
+	}
+
+/**********************Content Cripto**********************/
+	.tall{
+		height: 80%;
+	}
+	.tall .tall__content h4{
+		font-size: 24px;
+	}
+
+	.tall .tall__content p{
+		font-size: 21px;
+	}
+
+	/*Team card*/
+	.team h4{
+	 font-size: 22px;
+	}
+
+	.team p{
+	 font-size: 19px;
+	}	
+
+	/*Cards*/
+	.team .main h4 h2{
+	 font-size: 16px;
+	}
+
+	.card_img img.card_user_img{
+	 width: 10%;
+	}
+
+/**********************Risk**********************/
+	.risk .risk_content{
+	 text-align: left;
+	}
+
+	.risk_content h2{
+      font-size: 30px;
+    }
+
+    .risk_content p{
+    	font-size: 26px;
+    }
+
+/**********************Questions**********************/
+	.questions_block{
+	 width: 100%;
+	}
+
+	.questions_content{
+	 text-align: left; 	
+	}
+
+	.questions_content p{
+		font-size: 16px;
+	}
+
+	.title{
+	 font-size: 24px;
+	}
+
+/******************Recomendaciones_links******************/
+	.recomendaciones_links h4,
+	.site_web h4{
+		font-size: 21px;
+		text-align: center;
+	}
+
+	.recomendaciones_link{
+	 color: #FFFFFF;
+	 height: 90%;
+	 width: 85%;
+	 font-size: 18px;
+	}
+
+	.recomendaciones_link img{
+		height: 35%;
+	}
+
+/**********************Footer**********************/
+	.footer__title{
+		grid-column: 1/-1;
+		text-align: center;
+	}
+	.footer__links{
+		transform: translateX(100px);
+	}
+
+    .footer__links a{
+	  margin: auto;
+	}
+/**********************Form Information**********************/
+	.content_form{
+		height: 50vh;
+	}
+
+	.card_input_information{
+		font-size: 26px;
+		text-align: center;
+	}
+	.btn_form_information{
+	 	font-size: 26px;
+		padding: 20px 50px;
+
+	}
+	
+}
+
+@media (max-width: 380px){
+/**********************Content**********************/
+	.content__img img{
+	  height: 40vh;
+	}
+	/*transparent*/
+	.background__transparent{
+		height: 40vh;
+	}
+	/*Text*/
+	.content__text{
+     font-size: 20px;
+   }
+
+	/*Button*/
+	.content__text a{
+		padding: 15px 60px;
+	}	
+
+/**********************Btn_form**********************/
+   .btn_form{
+		top: 80px;
+	}
+}

@@ -1,0 +1,57 @@
+/*Grafico*/
+.table_content{
+	margin: auto;
+	width: 80%;
+}
+
+.table{
+	font-size: 21px;
+	color: #D3D3D3;
+}
+
+.table thead tr th{
+	border-bottom: 2px solid #D3D3D3; 
+}
+
+.positivo{
+	color: green;
+}
+
+.negativo{
+	color: red;
+}
+.table img{
+	width: 10%;
+}
+
+/*Media query*/
+@media (max-width: 768px){
+	.table_content{
+	 width: 100%;
+	}
+
+	.table{
+	font-size: 23px;
+	}
+
+	.table img{
+	 width: 20%;
+	}
+}
+
+@media (max-width: 680px){
+	.table_content{
+	 width: 70%;
+	 margin: 0;
+	}
+
+	.table{
+	font-size: 23px;
+	}
+
+	.table img{
+	 width: 10%;
+	}
+
+
+}

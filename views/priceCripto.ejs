@@ -1,0 +1,51 @@
+<%- include("template/cabecera", {tituloweb: 'Valor'}) %>
+
+<div class="table_content">
+	<table class="table">
+	 <thead>
+	  <tr>
+	 	<th scope="col">#</th>
+    	<th scope="col">Moneda</th>	
+    	<th scope="col">Precio</th>
+		<th scope="col">Precio 24h %</th>
+		<th scope="col">24h Volumen</th>			
+	   </tr>
+	 </thead>
+	 <tbody id="tbody"></tbody>
+	</table>
+</div> 
+
+<!--Recomendaciones-->
+    <div class="recomendaciones_links">
+      <h4>Paginas similares</h4>
+      <!--Datos-->
+      <%- include("template/recomendaciones", {
+          img_section: '/img/cripto.jpg',
+          titulo_section: 'Inicio',
+          parrafo_section: 'Aqui podras volver al menu principal.',
+          link_section: '/',
+          img_section2: '/img/curiosity.jpg',
+          titulo2_section: 'Curiosidades',
+          parrafo2_section: 'Aqui podras encontrar algunos datos y curiosidades sobre las criptomonedas',
+          link_section2: '/curiosity',
+             
+          }); %>      
+    </div>
+    <!--Mi otros sitios web-->
+    <div class="site_web">
+      <h4>Mi otros sitios web</h4>
+      <%- include("template/sitios_web"); %>
+    </div>
+    <!--Footer-->
+    <footer class="footer">
+    <span class="footer__title">
+     Cristian Zamora 2022. 
+     </span>
+     <!--Links--> 
+     <main class="footer__links">
+      <a target="__BLANK" href="https://github.com/Cristianz2021/" class="git"><i class="fab fa-github"></i></a>
+      <a target="__BLANK" href="https://www.linkedin.com/in/cristian-zamora-6bb1aa1b8/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      <a target="__BLANK" href="https://portafolio-cristian.herokuapp.com/" class="portfolio"><i class="fas fa-business-time"></i></a>
+     </main>
+    </footer>
+</html>

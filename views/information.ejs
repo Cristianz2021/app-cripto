@@ -1,0 +1,19 @@
+<%- include("template/cabecera", {tituloweb: 'Contact'}) %>
+<div class="content_form">
+  <form action="/new-user" id="form" class="form_information" method="post">
+  	<!--Name-->
+   	 <div class="card_input_information">
+	  <label>Name</label>
+	   <input type="text" id="name" name="name" placeholder="Name" autofocus>
+   	 </div>
+   	<!--Mail-->
+     <div class="card_input_information">
+	  <label>Email</label>
+	  <input type="email" id="email" name="email" placeholder="email" >
+	 </div>
+	  <button class="btn_form_information" id="btn_enviar">Enviar</button>
+   </form>
+</div>	
+
+	
+</html>

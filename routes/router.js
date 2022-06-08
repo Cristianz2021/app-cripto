@@ -1,15 +1,45 @@
 const express = require('express');
 const router = express.Router();
-//Variables de entorno
-require("dotenv").config();
+//config Nodemailer
+const nodemailer = require('nodemailer');
 
-//Config firebase
-const firebase = require('firebase-admin');
-const firebaseConfig = JSON.parse(process.env.FIREBASE_CONFIG);
+router.post('/new-user', async(req, res) => {
+	const {name, email} = req.body;
+	userHtml=`
+      <h4>Nuevo usuario app-cripto</h4> 
+	  <ul>
+	  	<li><h2>${name}<h2></li>
+		<li><h2>${email}<h2></li>
+	  </ul>
+    `;
 
-//Firebase config 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
+	const Email = process.env.PORTFOLIO_EMAIL;
+    const Password = process.env.PORTFOLIO_PASSWORD;
+    const Host = process.env.PORTFOLIO_HOST;
+    const Port = process.env.PORTFOLIO_PORT;
+
+	let transportador = nodemailer.createTransport({
+		host: Host,
+		port: Port,
+		 secure: false,
+        auth: {
+            user: Email,
+            pass: Password
+	    },
+        tls: {
+          rejectUnauthorized: false
+         }
+	});
+
+	 var mailOptions = await transportador.sendMail({
+     from: `"CristianZamora" <${Email}>`,
+     to:  'cristian.zamora2400@gmail.com',
+     subject: 'leading page information.',
+     html: userHtml
+    }); 
+     res.redirect('/sucess');
+});
+
 //Config of router
 router.get('/', (req, res)=>{
 	res.render('index');
@@ -17,18 +47,6 @@ router.get('/', (req, res)=>{
 
 router.get('/sucess', (req, res) =>{
 	res.render('sucess');
-});
-
-//received Post
-router.post('/new-user', (req, res) =>{
-	const User ={
-	  name: req.body.name,
-	  email: req.body.email
-	}
-
-	db.ref('users').push(User);
-	res.redirect('/sucess');
-	console.log('enviado');
 });
 
 //Curiosity render express
